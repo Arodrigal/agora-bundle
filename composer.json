@@ -30,7 +30,6 @@
       "agora integration bundle"
     ],
     "target-dir": "ThirdParts/AgoraBundle",
-    "minimum-stability": "dev",
     "extra": {
       "branch-alias": {
         "master": "1.0.0",
