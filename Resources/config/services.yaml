@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    public: true
+
+  laliga.sharepoint.api:
+    class: ThirdParts\AgoraBundle\Service\Api\AgoraApi
+    arguments:
+      - '@GuzzleHttp\Client'
+      - '@monolog.logger.security'
+      - '%env(AZURE_CLIENT_ID)%'
+      - '%env(AZURE_CLIENT_SECRET)%'
+      - '%env(SHAREPOINT_CONTAINER_ID)%'

@@ -1,0 +1,41 @@
+{
+    "name": "arodrigal/agora-integration-bundle",
+    "description": "agora-integration-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+      "php": "^7.2",
+      "symfony/config": "^3.4 || ^4.4",
+      "symfony/dependency-injection": "^3.4 || ^4.4",
+      "symfony/http-kernel": "^3.4 || ^4.4"
+    },
+    "require-dev": {
+      "symfony/framework-bundle": "^3.4 || ^4.4",
+      "symfony/phpunit-bridge": "^3.4 || ^4.4",
+      "symfony/browser-kit": "^3.4 || ^4.4",
+      "guzzlehttp/psr7": "1.6.*"
+    },
+    "autoload": {
+      "psr-0": {
+        "ThirdParts\\AgoraBundle\\": ""
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "ThirdParts\\AgoraBundle\\Tests\\": "tests/"
+      }
+    },
+    "keywords": [
+      "agora integration bundle"
+    ],
+    "target-dir": "ThirdParts/AgoraBundle",
+    "minimum-stability": "dev",
+    "extra": {
+      "branch-alias": {
+        "master": "1.0.0",
+        "dev": "develop",
+        "dev-master": "1.0.0",
+        "stable": "1.0.0"
+      }
+    }
+}
