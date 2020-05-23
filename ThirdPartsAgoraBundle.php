@@ -2,7 +2,7 @@
 
 namespace ThirdParts\AgoraBundle;
 
-use ThirdPart\AgoraBundle\DependencyInjection\AgoraExtension;
+use ThirdParts\AgoraBundle\DependencyInjection\AgoraExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class ThirdPartsAgoraBundle extends Bundle

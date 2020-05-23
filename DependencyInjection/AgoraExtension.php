@@ -1,6 +1,6 @@
 <?php
 
-namespace ThirdPart\AgoraBundle\DependencyInjection;
+namespace ThirdParts\AgoraBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
