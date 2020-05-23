@@ -22,7 +22,7 @@
     },
     "autoload-dev": {
       "psr-4": {
-        "ThirdParts\\AgoraBundle\\Tests\\": "tests/"
+        "ThirdParts\\AgoraBundle\\Tests\\": "Tests"
       }
     },
     "keywords": [

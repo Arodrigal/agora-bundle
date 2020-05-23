@@ -2,7 +2,7 @@
 
 namespace ThirdParts\AgoraBundle;
 
-use ThirdParts\AgoraBundle\DependencyInjection\ThirdPartsAgoraBundleExtension;
+use ThirdPart\AgoraBundle\DependencyInjection\AgoraExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class ThirdPartsAgoraBundle extends Bundle
@@ -13,7 +13,7 @@ class ThirdPartsAgoraBundle extends Bundle
     public function getContainerExtension()
     {
         if (null === $this->extension) {
-            $this->extension = new ThirdPartsAgoraBundleExtension();
+            $this->extension = new AgoraExtension();
         }
 
         return $this->extension;
