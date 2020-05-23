@@ -17,6 +17,6 @@ class ThirdPartsAgoraExtension extends Extension
 
     public function getAlias()
     {
-        return 'agora_integrationSharepoint';
+        return 'agora_integration';
     }
 }
