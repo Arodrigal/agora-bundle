@@ -21,6 +21,7 @@ class AgoraApiAbstract
     protected LoggerInterface $logger;
     protected Client $client;
     protected float $executeStartTime;
+    //private $url;
 
     /**
      * SharepointApi constructor.
@@ -32,6 +33,7 @@ class AgoraApiAbstract
         $this->executeStartTime = microtime(true);
         $this->logger = $logger;
         $this->client = $client;
+        //$this->url = 
     }
 
     protected function listFolders(?string $idParentFolder = null): ItemsAgoraDTO
