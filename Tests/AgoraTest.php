@@ -2,30 +2,21 @@
 
 namespace ThirdParts\AgoraBundle\Tests;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-use ThirdParts\AgoraBundle\Tests\Base\BaseCommandTester;
-use PHPUnit\Framework\TestCase;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use ThirdParts\AgoraBundle\Service\Api\AgoraApi;
+use PHPUnit\Framework\TestCase;
 
-class AgoraTest extends KernelTestCase
+class AgoraTest extends TestCase
 {
-    
-    public function testCall()
+    public function testServiceWiring()
     {
-        // $kernel = new SimpleKernel('SimpleKernel_test', true);
-        //$kernel->boot();
+        $kernel = new AgoraTestingKernel('test', true);
+        //$kernel = new BlobStorageTestingKernel();
+        $kernel->boot();
+        $container = $kernel->getContainer();
 
-        
-        $service = self::bootKernel()::$container->get(AgoraApi::class);
-        
-        /** @var $service AgoraApi */
-        $service = self::bootKernel()->getContainer()->get('test.thirdparts.agora.api');
-        
-        $service->listFiles('1');
-        $this->assertTrue(true);
+        /** @var AgoraApi $blob */
+        $blob = $container->get('thirdparts.agora.api');
 
+        $this->assertInstanceOf(AgoraApi::class, $blob);
     }
 }

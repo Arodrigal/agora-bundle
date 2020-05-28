@@ -14,13 +14,14 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class SharepointApiAbstract.
+ * Class AgoraApiAbstract.
  */
 class AgoraApiAbstract
 {
-    protected LoggerInterface $logger;
-    protected Client $client;
-    protected float $executeStartTime;
+
+    protected $logger = null;
+    protected $client;
+    protected $executeStartTime;
     //private $url;
 
     /**
@@ -40,7 +41,7 @@ class AgoraApiAbstract
     {
         try {
             $this->logger->info('Llamada API Agora para obtener el listado de los documentos de una carpeta');
-            //$res = $this->client->request(Request::METHOD_GET, $url, $this->getOptionsHeaders());
+            //AgoraTest copy$res = $this->client->request(Request::METHOD_GET, $url, $this->getOptionsHeaders());
             //return new ItemsAgoraDTO($this->extractData($res->getBody()));
             return new ItemsAgoraDTO(null);
         } catch (\Exception $e) {

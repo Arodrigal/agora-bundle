@@ -2,9 +2,7 @@
 
 namespace ThirdParts\AgoraBundle\Service\Api;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Psr7\Response;
+use Guzzle\Client;
 use ThirdParts\AgoraBundle\Exception\AgoraApiException;
 use ThirdParts\AgoraBundle\Service\DTO\ItemsAgoraDTO;
 use ThirdParts\AgoraBundle\Service\Response\AgoraApiResponse;
