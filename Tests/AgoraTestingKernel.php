@@ -3,6 +3,7 @@
 namespace ThirdParts\AgoraBundle\Tests;
 
 use ThirdParts\AgoraBundle\ThirdPartsAgoraBundle;
+//use EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundle;
 use Symfony\Component\HttpKernel\Kernel;
 
 class AgoraTestingKernel extends Kernel
@@ -15,7 +16,8 @@ class AgoraTestingKernel extends Kernel
     public function registerBundles()
     {
         return [
-            new ThirdPartsAgoraBundle()
+            new ThirdPartsAgoraBundle(),
+            //new EightPointsGuzzleBundle()
         ];
     }
 
@@ -23,6 +25,6 @@ class AgoraTestingKernel extends Kernel
     {
         // TODO: Implement registerContainerConfiguration() method.
         //return $loader->load(__DIR__.'/Resouces/config/_'.$this->getEnvironment().'.yml');
-        return $loader->load(__DIR__.'/../Resources/config/eight_points_guzzle.yaml');
+        //return $loader->load(__DIR__.'/../Resources/config/eight_points_guzzle.yaml');
     }
 }
