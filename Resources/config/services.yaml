@@ -1,47 +1,16 @@
-eight_points_guzzle:
-  # (de)activate logging/profiler; default: %kernel.debug%
-  logging: true
 
-  # configure when a response is considered to be slow (in ms); default 0 (disabled)
-  slow_response_time: 1000
+imports:
+    - { resource: eight_points_guzzle.yaml }
 
-  clients:
-      crm:
-        base_url: 'http://api.payment.example'
-          
-        headers:
-          Accept: 'application/json'
-        timeout: 30
-
-        # plugin settings
-        plugin: ~
-        
 services:
 
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-    public: true
+    public: false
 
   thirdparts.agora.api:
     class: ThirdParts\AgoraBundle\Service\Api\AgoraApi
     arguments:
       - '@eight_points_guzzle.client.crm'
       - '@monolog.logger.security'
-
-
-  # eight_points_guzzle:
-  #   # (de)activate logging/profiler; default: %kernel.debug%
-  #   logging: true
-
-  #   # configure when a response is considered to be slow (in ms); default 0 (disabled)
-  #   slow_response_time: 1000
-
-  #   clients:
-  #       crm:
-  #           base_url: 'http://api.crm.tld'
-  #           options:
-  #               headers:
-  #                   Accept: 'application/json'
-
-  #       # More clients here

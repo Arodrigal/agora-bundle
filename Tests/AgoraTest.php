@@ -10,13 +10,14 @@ class AgoraTest extends TestCase
     public function testServiceWiring()
     {
         $kernel = new AgoraTestingKernel('test', true);
-        //$kernel = new BlobStorageTestingKernel();
+        
         $kernel->boot();
         $container = $kernel->getContainer();
 
-        /** @var AgoraApi $blob */
-        $blob = $container->get('thirdparts.agora.api');
+        /** @var AgoraApi $service */
+        //$service = $container->get('thirdparts.agora.api');
+        $service = $container->get('test.thirdparts.agora.api');
 
-        $this->assertInstanceOf(AgoraApi::class, $blob);
+        $this->assertInstanceOf(AgoraApi::class, $service);
     }
 }

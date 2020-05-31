@@ -2,9 +2,10 @@
 
 namespace ThirdParts\AgoraBundle\Tests;
 
-use ThirdParts\AgoraBundle\ThirdPartsAgoraBundle;
-//use EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundle;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use ThirdParts\AgoraBundle\ThirdPartsAgoraBundle;
+use EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundle;
 
 class AgoraTestingKernel extends Kernel
 {
@@ -16,8 +17,9 @@ class AgoraTestingKernel extends Kernel
     public function registerBundles()
     {
         return [
+            new FrameworkBundle(),
             new ThirdPartsAgoraBundle(),
-            //new EightPointsGuzzleBundle()
+            new EightPointsGuzzleBundle()
         ];
     }
 
