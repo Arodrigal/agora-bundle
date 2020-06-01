@@ -7,7 +7,7 @@ eight_points_guzzle:
 
   clients:
     crm:
-      base_url: 'http://api.payment.example'
+      base_url: '%env(resolve:API_URL)%'
         
       headers:
         Accept: 'application/json'

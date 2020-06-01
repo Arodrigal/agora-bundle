@@ -18,8 +18,8 @@ class AgoraTestingKernel extends Kernel
     {
         return [
             new FrameworkBundle(),
-            new ThirdPartsAgoraBundle(),
-            new EightPointsGuzzleBundle()
+            new EightPointsGuzzleBundle(),
+            new ThirdPartsAgoraBundle()
         ];
     }
 
